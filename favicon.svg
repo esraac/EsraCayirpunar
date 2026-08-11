@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="24" fill="#04070f"/>
+  <rect x="3" y="3" width="94" height="94" rx="21" fill="none" stroke="url(#cyberGrad)" stroke-width="4" opacity="0.9"/>
+  <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="'Fira Code', monospace" font-weight="900" font-size="32" fill="url(#cyberGrad)">&lt;E.Ç/&gt;</text>
+</svg>

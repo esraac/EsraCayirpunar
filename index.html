@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esra Çayırpunar | Bilgisayar Mühendisi</title>
+    <meta name="description"
+        content="Esra Çayırpunar kişisel portfolyosu.">
+    <meta name="keywords"
+        content="Esra Çayırpunar, Bilgisayar Mühendisi, Kotlin, Android BLE, Unity 3D, .NET Core, Yapay Zeka">
+    <meta name="author" content="Esra Çayırpunar">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Esra Çayırpunar | Bilgisayar Mühendisi">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.svg">
+    <link rel="apple-touch-icon" href="esra.png">
+
+    <!-- Open Graph Social Preview Image -->
+    <meta property="og:image" content="esra.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Canvas for Matrix Rain Effect -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Cyber Glassmorphic Header Navigation -->
+    <header class="site-header" id="site-header">
+        <div class="nav-container">
+            <a href="#hero" class="cyber-brand">
+                <div class="brand-avatar-mini">
+                    <img src="esra.png" alt="Esra Çayırpunar Logo" class="brand-logo-img">
+                </div>
+                <div class="brand-badge-content">
+                    <span class="brand-title">Esra Çayırpunar</span>
+                    <span class="brand-subtitle">Bilgisayar Mühendisi</span>
+                </div>
+            </a>
+
+            <nav class="main-nav" id="main-nav">
+                <a href="#about" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> Hakkımda</a>
+                <a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Deneyim</a>
+                <a href="#skills" class="nav-link"><i class="fa-solid fa-layer-group"></i> Yetenekler</a>
+                <a href="#languages" class="nav-link"><i class="fa-solid fa-language"></i> Diller</a>
+                <a href="#projects" class="nav-link"><i class="fa-solid fa-folder-open"></i> Projeler</a>
+                <a href="#terminal-section" class="nav-link"><i class="fa-solid fa-terminal"></i> Terminal</a>
+                <a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> İletişim</a>
+            </nav>
+
+            <div class="header-controls">
+                <a href="https://github.com/esraac" target="_blank" class="header-social-link"
+                    title="GitHub Profilim">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/esra-%C3%A7ay%C4%B1rpunar/" target="_blank"
+                    class="header-social-link" title="LinkedIn Profilim">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menüyü Aç/Kapat">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with IDE Mockup -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <!-- Top Full-Width Profile Banner -->
+                <div class="hero-top-banner">
+                    <div class="hero-avatar-wrapper">
+                        <div class="avatar-cyber-frame">
+                            <div class="avatar-laser-ring"></div>
+                            <img src="esra.png" alt="Esra Çayırpunar" class="profile-avatar-img">
+                            <div class="avatar-status-badge">
+                                <span class="badge-dot"></span>
+                                <span>BSc. Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-title-group">
+                        <h1 class="hero-title">
+                            Merhaba, ben <span class="highlight-gradient">Esra Çayırpunar</span>
+                        </h1>
+                        <h2 class="hero-subtitle">
+                            <span id="typing-role">Bilgisayar Mühendisi</span><span class="blinking-cursor">|</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Side-by-Side Grid: Left Biography & Stats + Right Full-Size IDE Mockup -->
+                <div class="hero-content-grid">
+                    <!-- Left Column: Biography, Buttons & Stats -->
+                    <div class="hero-bio-column">
+                        <p class="hero-description">
+                            Karadeniz Teknik Üniversitesi Bilgisayar Mühendisliği bölümünden mezun oldum. Benim için mühendislik, sadece kod yazmaktan ibaret değil; topluma fayda sağlayan, kaliteli ve çözüm odaklı sistemler inşa etmektir. Sürekli değişen teknoloji ekosisteminde öğrenme merakımı canlı tutarak ölçeklenebilir projelerde etkin roller oynamayı ve geniş kitlelerin hayatına dokunan teknolojilere değer katmayı hedefliyorum.
+                        </p>
+
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">
+                                <i class="fa-solid fa-folder-open"></i> Projelerimi İncele
+                            </a>
+                            <a href="#experience" class="btn btn-secondary">
+                                <i class="fa-solid fa-briefcase"></i> Deneyim & Eğitim
+                            </a>
+                            <a href="#contact" class="btn btn-outline">
+                                <i class="fa-solid fa-paper-plane"></i> İletişime Geç
+                            </a>
+                        </div>
+
+                        <div class="quick-stats">
+                            <div class="stat-item">
+                                <span class="stat-num">3.14</span>
+                                <span class="stat-label">KTÜ Lisans GPA</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">B1</span>
+                                <span class="stat-label">İngilizce Seviyesi</span>
+                            </div>
+                            <div class="stat-item cv-download-item">
+                                <span class="stat-num"><i class="fa-solid fa-file-pdf"></i> Özgeçmiş (CV)</span>
+                                <div class="cv-buttons">
+                                    <a href="EsraCayırpunarCV.pdf" download="EsraCayırpunarCV.pdf" class="cv-btn tr-cv" title="Esra Çayırpunar CV İndir">
+                                        <i class="fa-solid fa-download"></i> CV İndir (PDF)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive IDE Editor Mockup -->
+                    <div class="ide-wrapper">
+                        <div class="ide-container">
+                            <!-- IDE Header Bar -->
+                            <div class="ide-header">
+                                <div class="window-controls">
+                                    <span class="control-btn close"></span>
+                                    <span class="control-btn minimize"></span>
+                                    <span class="control-btn maximize"></span>
+                                </div>
+                                <div class="ide-tabs">
+                                    <button class="ide-tab active" data-tab="tab-developer">
+                                        <i class="fa-brands fa-android file-icon kt"></i> Engineer.kt
+                                    </button>
+                                    <button class="ide-tab" data-tab="tab-skills">
+                                        <i class="fa-solid fa-code file-icon json"></i> stack.config.json
+                                    </button>
+                                    <button class="ide-tab" data-tab="tab-contact">
+                                        <i class="fa-brands fa-java file-icon java"></i> BackendServices.java
+                                    </button>
+                                </div>
+                                <div class="ide-actions">
+                                    <span class="ide-badge"><i class="fa-solid fa-check-double"></i> Android BLE & .NET Core</span>
+                                </div>
+                            </div>
+
+                            <!-- IDE Code Area -->
+                            <div class="ide-body">
+                                <!-- Tab 1: Kotlin Engineer Info -->
+                                <div class="tab-content active" id="tab-developer">
+                                    <pre><code><span class="code-keyword">package</span> com.esra.portfolio
+
+<span class="code-keyword">data class</span> <span class="code-class">ComputerEngineer</span>(
+    <span class="code-keyword">val</span> name: <span class="code-type">String</span> = <span class="code-string">"Esra Çayırpunar"</span>,
+    <span class="code-keyword">val</span> university: <span class="code-type">String</span> = <span class="code-string">"Karadeniz Teknik Üniv."</span>,
+    <span class="code-keyword">val</span> degree: <span class="code-type">String</span> = <span class="code-string">"Bilgisayar Mühendisliği (GPA: 3.14)"</span>,
+    <span class="code-keyword">val</span> role: <span class="code-type">String</span> = <span class="code-string">"Bilgisayar Mühendisi"</span>
+) {
+    <span class="code-keyword">fun</span> <span class="code-func">getCoreCompetencies</span>(): <span class="code-type">List&lt;String&gt;</span> = listOf(
+        <span class="code-string">"Android BLE & Modbus Entegrasyonu (Kotlin)"</span>,
+        <span class="code-string">"Modern Mobil (Jetpack Compose, Clean Arch, MVVM)"</span>,
+        <span class="code-string">"Backend Mimarisi (.NET Core, C#, Web API, Java Spring Boot)"</span>,
+        <span class="code-string">"Yapay Zeka & NLP (MEDSES Sağlık Asistanı, BERTurk, Federatif Phishing)"</span>,
+        <span class="code-string">"Simülasyon & Görüntü (Unity 3D, C++)"</span>
+    )
+}</code></pre>
+                                </div>
+
+                                <!-- Tab 2: Stack Config JSON -->
+                                <div class="tab-content" id="tab-skills">
+                                    <pre><code>{
+  <span class="code-json-key">"engineer"</span>: <span class="code-string">"Esra Çayırpunar"</span>,
+  <span class="code-json-key">"mobile_tech"</span>: {
+    <span class="code-json-key">"languages"</span>: [<span class="code-string">"Kotlin"</span>, <span class="code-string">"Java"</span>, <span class="code-string">"Dart"</span>],
+    <span class="code-json-key">"architectures"</span>: [<span class="code-string">"Clean Architecture"</span>, <span class="code-string">"MVVM"</span>, <span class="code-string">"MVI"</span>],
+    <span class="code-json-key">"protocols"</span>: [<span class="code-string">"Android BLE"</span>, <span class="code-string">"Modbus"</span>, <span class="code-string">"REST API"</span>]
+  },
+  <span class="code-json-key">"backend_tech"</span>: {
+    <span class="code-json-key">"frameworks"</span>: [<span class="code-string">".NET Core"</span>, <span class="code-string">"ASP.NET (MVC/Core/API)"</span>, <span class="code-string">"Java Spring Boot"</span>, <span class="code-string">"Python Flask/FastAPI"</span>],
+    <span class="code-json-key">"databases"</span>: [<span class="code-string">"SQL Server"</span>, <span class="code-string">"PostgreSQL"</span>]
+  }
+}</code></pre>
+                                </div>
+
+                                <!-- Tab 3: Backend Java -->
+                                <div class="tab-content" id="tab-contact">
+                                    <pre><code><span class="code-keyword">package</span> com.esra.services;
+
+<span class="code-decorator">@RestController</span>
+<span class="code-decorator">@RequestMapping</span>(<span class="code-string">"/api/v1/engineer"</span>)
+<span class="code-keyword">public class</span> <span class="code-class">EngineerController</span> {
+
+    <span class="code-decorator">@GetMapping</span>(<span class="code-string">"/contact"</span>)
+    <span class="code-keyword">public</span> ResponseEntity&lt;ContactDTO&gt; <span class="code-func">getContactInfo</span>() {
+        <span class="code-keyword">return</span> ResponseEntity.ok(<span class="code-keyword">new</span> ContactDTO(
+            <span class="code-string">"ecayirpunar@gmail.com"</span>,
+            <span class="code-string">"+90 546 763 44 66"</span>,
+            <span class="code-string">"github.com/esraac"</span>
+        ));
+    }
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- IDE Footer Status Bar -->
+                            <div class="ide-footer">
+                                <div class="ide-footer-left">
+                                    <span><i class="fa-solid fa-code-branch"></i> main</span>
+                                    <span><i class="fa-solid fa-circle-check"></i> KTU Bilgisayar Mühendisliği</span>
+                                </div>
+                                <div class="ide-footer-right">
+                                    <span>UTF-8</span>
+                                    <span>Kotlin / C# / Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">&lt;whoami&gt;</span>
+                    <h2 class="section-title">Hakkımda & Vizyonum</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-panel">
+                        <div class="about-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>Eğitim & Mühendislik Disiplini</h3>
+                        <p>Karadeniz Teknik Üniversitesi Bilgisayar Mühendisliği bölümünden mezun oldum. Eğitim hayatım boyunca yazılım geliştirme alanında modern mühendislik yaklaşımlarını benimseyerek kendimi geliştirdim.</p>
+                    </div>
+
+                    <div class="about-card glass-panel">
+                        <div class="about-icon"><i class="fa-brands fa-android"></i></div>
+                        <h3>Mobil & Gömülü İletişim</h3>
+                        <p>Kotlin, Jetpack Compose, MVVM/MVI, Clean Architecture, Android BLE (Bluetooth Low Energy) ve Modbus protokolleri ile donanım entegrasyonlu ve yüksek performanslı mobil uygulamalar geliştiriyorum.</p>
+                    </div>
+
+                    <div class="about-card glass-panel">
+                        <div class="about-icon"><i class="fa-solid fa-server"></i></div>
+                        <h3>Backend & Yapay Zeka Entegrasyonu</h3>
+                        <p>.NET Core, C#, Web API, SQL Server, Java Spring Boot, Python ve BERTurk NLP / Federatif Öğrenme modelleriyle güvenli ve ölçeklenebilir backend sistemleri inşa ediyorum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">&lt;career-roadmap&gt;</span>
+                    <h2 class="section-title">Kariyer Yolculuğum & Deneyim</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Dual Column Layout: Separate Work & Education Sections -->
+                <div class="career-dual-grid">
+                    <!-- Left Section: İş & Staj Deneyimleri -->
+                    <div class="career-column">
+                        <div class="career-section-title">
+                            <div class="column-title-badge work-theme">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>İş & Staj Deneyimleri</span>
+                            </div>
+                        </div>
+
+                        <div class="career-cards-list">
+                            <!-- GİB Teknoloji -->
+                            <div class="roadmap-card glass-panel">
+                                <div class="roadmap-icon work-icon">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-header">
+                                        <div>
+                                            <span class="roadmap-type-badge work-badge"><i class="fa-solid fa-building"></i> Staj (Internship)</span>
+                                            <h3 class="roadmap-title">Bilgisayar Mühendisi Stajyeri</h3>
+                                            <h4 class="roadmap-company">GİB Teknoloji (Ankara)</h4>
+                                        </div>
+                                        <div class="roadmap-time"><i class="fa-regular fa-calendar"></i> Temmuz 2026 – Devam Ediyor</div>
+                                    </div>
+                                    <p class="roadmap-desc">
+                                        GİB Teknoloji bünyesinde Bilgisayar Mühendisi stajyeri olarak yazılım kalite güvence, manuel test etme, test çalışmaları ve test otomasyonu süreçlerini yürütüyorum.
+                                    </p>
+                                    <div class="roadmap-highlights">
+                                        <span class="highlight-chip"><i class="fa-solid fa-vial"></i> Test Otomasyonu & Manuel Test</span>
+                                        <span class="highlight-chip"><i class="fa-solid fa-check-double"></i> Kalite Güvence & Mühendislik</span>
+                                    </div>
+                                    <div class="roadmap-tech-tags">
+                                        <span>Mühendislik</span>
+                                        <span>Manuel Test Etme</span>
+                                        <span>Test Otomasyonu</span>
+                                        <span>Test Çalışması</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Promec Mekanik -->
+                            <div class="roadmap-card glass-panel">
+                                <div class="roadmap-icon work-icon">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-header">
+                                        <div>
+                                            <span class="roadmap-type-badge work-badge"><i class="fa-solid fa-building"></i> Staj (Internship)</span>
+                                            <h3 class="roadmap-title">Stajyer Yazılım Mühendisi</h3>
+                                            <h4 class="roadmap-company">Promec Mekanik Arge Mühendislik Tek. San. ve Tic. A. Ş.</h4>
+                                        </div>
+                                        <div class="roadmap-time"><i class="fa-regular fa-calendar"></i> Ağustos 2025 – Eylül 2025</div>
+                                    </div>
+                                    <p class="roadmap-desc">
+                                        Pan-Tilt mekanizmaları ve Solar Track sistemlerinin yazılım süreçlerinde görev aldım. Güneş panellerinin uzaktan yönetimi için Kotlin ile Android BLE mobil uygulamasını geliştirerek; Modbus protokolü entegrasyonu, veri serileştirme (JSON) ve MTU optimizasyon süreçlerini yürüttüm. Ayrıca Unity 3D simülasyon altyapısı geliştirdim.
+                                    </p>
+                                    <div class="roadmap-highlights">
+                                        <span class="highlight-chip"><i class="fa-solid fa-bluetooth"></i> Android BLE & Modbus</span>
+                                        <span class="highlight-chip"><i class="fa-solid fa-cube"></i> Unity 3D Simülasyon</span>
+                                    </div>
+                                    <div class="roadmap-tech-tags">
+                                        <span>Kotlin</span>
+                                        <span>C#</span>
+                                        <span>XAML</span>
+                                        <span>Android SDK</span>
+                                        <span>BLE</span>
+                                        <span>Modbus</span>
+                                        <span>Unity 3D</span>
+                                        <span>JSON</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- KTÜ SKS -->
+                            <div class="roadmap-card glass-panel">
+                                <div class="roadmap-icon work-icon">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-header">
+                                        <div>
+                                            <span class="roadmap-type-badge work-badge"><i class="fa-solid fa-network-wired"></i> Yarı Zamanlı (Part Time)</span>
+                                            <h3 class="roadmap-title">Part Time Yazılım Kursiyeri</h3>
+                                            <h4 class="roadmap-company">KTÜ Sağlık Kültür Spor Daire Başkanlığı</h4>
+                                        </div>
+                                        <div class="roadmap-time"><i class="fa-regular fa-calendar"></i> Mart 2025 – Mayıs 2025 & Ekim 2025 - Mayıs 2026</div>
+                                    </div>
+                                    <p class="roadmap-desc">
+                                        Kurum bünyesinde aktif olarak kullanılan resmi web sitelerinin ve iç yönetim sistemlerinin backend mimarilerini .NET teknolojilerini kullanarak geliştirdim ve modernize ettim. Veritabanı tasarımı ve veri güvenliği süreçlerini yönettim.
+                                    </p>
+                                    <div class="roadmap-highlights">
+                                        <span class="highlight-chip"><i class="fa-solid fa-database"></i> SQL Server Veritabanı Tasarımı</span>
+                                        <span class="highlight-chip"><i class="fa-solid fa-bolt"></i> High-Speed Web API</span>
+                                    </div>
+                                    <div class="roadmap-tech-tags">
+                                        <span>.NET Core</span>
+                                        <span>C#</span>
+                                        <span>Web API</span>
+                                        <span>SQL Server</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Section: Eğitim & Akademik Başarılar -->
+                    <div class="career-column">
+                        <div class="career-section-title">
+                            <div class="column-title-badge edu-theme">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>Eğitim & Akademik Başarılar</span>
+                            </div>
+                        </div>
+
+                        <div class="career-cards-list">
+                            <!-- KTÜ Education -->
+                            <div class="roadmap-card glass-panel">
+                                <div class="roadmap-icon edu-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <div class="roadmap-header">
+                                        <div>
+                                            <span class="roadmap-type-badge edu-badge"><i class="fa-solid fa-award"></i> Lisans Derecesi</span>
+                                            <h3 class="roadmap-title">Bilgisayar Mühendisliği Lisans</h3>
+                                            <h4 class="roadmap-company">Karadeniz Teknik Üniversitesi (KTÜ)</h4>
+                                        </div>
+                                        <div class="roadmap-time"><i class="fa-regular fa-calendar"></i> 2021 – 2026</div>
+                                    </div>
+                                    <p class="roadmap-desc">
+                                        Mühendislik prensipleri, veri yapıları, algoritmalar ve nesne yönelimli programlama disiplini ile mezun oldum.
+                                    </p>
+                                    <div class="roadmap-highlights">
+                                        <span class="highlight-chip trophy"><i class="fa-solid fa-trophy"></i> GPA: 3.14</span>
+                                    </div>
+                                    <div class="roadmap-tech-tags">
+                                        <span>Yazılım Mimarisi</span>
+                                        <span>OOP & Clean Code</span>
+                                        <span>Veri Yapıları</span>
+                                        <span>Algoritmalar</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack & Skills Section -->
+        <section id="skills" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">&lt;technical-skills&gt;</span>
+                    <h2 class="section-title">Teknoloji Yeteneklerim</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="skills-categories">
+                    <!-- Mobile -->
+                    <div class="skill-category glass-panel">
+                        <h3 class="category-title"><i class="fa-brands fa-android"></i> Mobil Geliştirme</h3>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><i class="fa-solid fa-cube"></i> Kotlin</span>
+                            <span class="skill-tag"><i class="fa-brands fa-java"></i> Java</span>
+                            <span class="skill-tag"><i class="fa-solid fa-cubes"></i> Dart</span>
+                            <span class="skill-tag">Clean Architecture</span>
+                            <span class="skill-tag">MVVM / MVI</span>
+                            <span class="skill-tag">Android BLE (Bluetooth Low Energy)</span>
+                            <span class="skill-tag">Modbus Entegrasyonu</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend & Web -->
+                    <div class="skill-category glass-panel">
+                        <h3 class="category-title"><i class="fa-solid fa-server"></i> Backend & Web Geliştirme</h3>
+                        <div class="skills-tags">
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">.NET Core</span>
+                            <span class="skill-tag">ASP.NET (MVC, Core, Web API)</span>
+                            <span class="skill-tag"><i class="fa-brands fa-java"></i> Java Spring Boot</span>
+                            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python (Flask / FastAPI)</span>
+                            <span class="skill-tag"><i class="fa-solid fa-database"></i> SQL Server</span>
+                        </div>
+                    </div>
+
+                    <!-- Software Testing & QA -->
+                    <div class="skill-category glass-panel">
+                        <h3 class="category-title"><i class="fa-solid fa-vial-circle-check"></i> Yazılım Testi & Kalite Güvence (QA)</h3>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><i class="fa-solid fa-check-double"></i> Manuel Test Etme</span>
+                            <span class="skill-tag"><i class="fa-solid fa-vial"></i> Test Otomasyonu</span>
+                            <span class="skill-tag"><i class="fa-solid fa-list-check"></i> Test Çalışması</span>
+                            <span class="skill-tag"><i class="fa-solid fa-bug"></i> Hata Raporlama & İzleme</span>
+                            <span class="skill-tag">Yazılım Kalite Güvence (QA)</span>
+                            <span class="skill-tag">Test Senaryoları & Stratejisi</span>
+                        </div>
+                    </div>
+
+                    <!-- AI & Tools -->
+                    <div class="skill-category glass-panel">
+                        <h3 class="category-title"><i class="fa-solid fa-brain"></i> Yapay Zeka & Geliştirme Araçları</h3>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><i class="fa-solid fa-robot"></i> NLP (BERTurk Modelleri)</span>
+                            <span class="skill-tag">TensorFlow & Keras</span>
+                            <span class="skill-tag">Federatif Öğrenme (Flower)</span>
+                            <span class="skill-tag">Unity 3D</span>
+                            <span class="skill-tag">Android Studio</span>
+                            <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+                            <span class="skill-tag">BiLSTM & NLTK</span>
+                            <span class="skill-tag">C++ (C++/CLI)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Standalone Foreign Languages Section -->
+        <section id="languages" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">&lt;foreign-languages&gt;</span>
+                    <h2 class="section-title">Yabancı Diller & İletişim</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="languages-standalone-grid">
+                    <!-- English Card -->
+                    <div class="lang-standalone-card glass-panel">
+                        <div class="lang-card-header">
+                            <div class="lang-flag-icon">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </div>
+                            <div class="lang-title-group">
+                                <h3 class="lang-title">İngilizce (English)</h3>
+                                <span class="lang-level-pill b1-pill"><i class="fa-solid fa-certificate"></i> B1 (Orta Seviye / Intermediate)</span>
+                            </div>
+                        </div>
+                        <p class="lang-card-desc">
+                            Teknik dokümantasyon okuma ve yazma, küresel kaynaklarda araştırma yapma, REST API spesifikasyonları hazırlama ve uluslararası ekiplerde mesleki iletişim kurma yetkinliği.
+                        </p>
+                        <div class="lang-progress-wrapper">
+                            <div class="lang-progress-header">
+                                <span>Yetkinlik Seviyesi</span>
+                                <span class="lang-percent">B1 Level (65%)</span>
+                            </div>
+                            <div class="lang-progress-bar">
+                                <div class="lang-progress-fill b1-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Turkish Card -->
+                    <div class="lang-standalone-card glass-panel">
+                        <div class="lang-card-header">
+                            <div class="lang-flag-icon native-flag">
+                                <i class="fa-solid fa-flag"></i>
+                            </div>
+                            <div class="lang-title-group">
+                                <h3 class="lang-title">Türkçe (Turkish)</h3>
+                                <span class="lang-level-pill native-pill"><i class="fa-solid fa-star"></i> Ana Dil (Native)</span>
+                            </div>
+                        </div>
+                        <p class="lang-card-desc">
+                            Ana dil seviyesinde akıcı, etkili ve kurumsal standartlara uygun sözlü, yazılı ve teknik sunum iletişimi.
+                        </p>
+                        <div class="lang-progress-wrapper">
+                            <div class="lang-progress-header">
+                                <span>Yetkinlik Seviyesi</span>
+                                <span class="lang-percent">Native (100%)</span>
+                            </div>
+                            <div class="lang-progress-bar">
+                                <div class="lang-progress-fill native-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">&lt;portfolio-work&gt;</span>
+                    <h2 class="section-title">Gerçekleştirdiğim Projeler</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Project Category Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">Tümü</button>
+                    <button class="filter-btn" data-filter="mobile">Mobil Uygulamalar</button>
+                    <button class="filter-btn" data-filter="ai">Yapay Zeka & NLP</button>
+                    <button class="filter-btn" data-filter="backend">Backend & Sistem</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project 1: MEDSES Bitirme Projesi AI Chat -->
+                    <div class="project-card glass-panel" data-category="mobile ai backend">
+                        <div class="project-header">
+                            <div class="project-folder"><i class="fa-solid fa-heart-pulse"></i></div>
+                            <div class="project-links">
+                                <a href="https://github.com/esraac" target="_blank"
+                                    aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <span class="project-badge">Lisans Bitirme Projesi</span>
+                        <h3 class="project-title">MEDSES / Ses Tabanlı AI Sağlık Asistanı</h3>
+                        <p class="project-description">
+                            Kullanıcıların sesli komutlar aracılığıyla asistanla güvenli etkileşim kurabildiği, yapay zeka desteği ile semptomdan poliklinik tahmini yapan ve o poliklinik için randevu oluşturmayı sağlayan kapsamlı mobil sağlık platformu.
+                        </p>
+                        <div class="project-tech-list">
+                            <span>Kotlin (Jetpack Compose, MVVM)</span>
+                            <span>Clean Architecture</span>
+                            <span>Retrofit</span>
+                            <span>Java Spring Boot</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Federatif Phishing -->
+                    <div class="project-card glass-panel" data-category="ai backend">
+                        <div class="project-header">
+                            <div class="project-folder"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="project-links">
+                                <a href="https://github.com/esraac" target="_blank"
+                                    aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <span class="project-badge">Yapay Zeka & Siber Güvenlik</span>
+                        <h3 class="project-title">Federatif Oltalama (Phishing) Tespit Sistemi</h3>
+                        <p class="project-description">
+                            Veri gizliliğini koruyarak yerel cihazda e-posta analizi yapan ve hibrit savunma algoritmalarıyla label-flipping veri zehirleme saldırılarını engelleyen federatif yapay zeka sistemi.
+                        </p>
+                        <div class="project-tech-list">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>Keras</span>
+                            <span>Flower (flwr)</span>
+                            <span>BiLSTM</span>
+                            <span>NLTK</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Yapay Sinir Ağları -->
+                    <div class="project-card glass-panel" data-category="ai backend">
+                        <div class="project-header">
+                            <div class="project-folder"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="project-links">
+                                <a href="https://github.com/esraac" target="_blank"
+                                    aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <span class="project-badge">Masaüstü & Yapay Zeka</span>
+                        <h3 class="project-title">Yapay Sinir Ağları Simülasyon Projesi</h3>
+                        <p class="project-description">
+                            Interaktif 2B arayüz üzerinden dinamik veri setleri oluşturulmasına; Perceptron, MLP ve Lineer Regresyon modellerinin sıfırdan eğitilip karar sınırlarının (decision boundaries) gerçek zamanlı görselleştirilmesine olanak tanıyan uygulama.
+                        </p>
+                        <div class="project-tech-list">
+                            <span>C++ (C++/CLI)</span>
+                            <span>.NET Windows Forms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal Section -->
+        <section id="terminal-section" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">&lt;interactive-cli&gt;</span>
+                    <h2 class="section-title">Canlı Terminal Komut Satırı</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <p class="terminal-intro">
+                    Komut satırından Esra'nın CV bilgilerini incelemek için <code class="cmd-highlight">help</code>,
+                    <code class="cmd-highlight">projects</code>, <code class="cmd-highlight">experience</code>, <code
+                        class="cmd-highlight">gpa</code> veya <code class="cmd-highlight">contact</code> yazabilirsin!
+                </p>
+
+                <div class="terminal-box glass-panel">
+                    <div class="terminal-header">
+                        <div class="window-controls">
+                            <span class="control-btn close"></span>
+                            <span class="control-btn minimize"></span>
+                            <span class="control-btn maximize"></span>
+                        </div>
+                        <div class="terminal-title"><i class="fa-solid fa-terminal"></i> esra@ktu-engineer-laptop: ~
+                        </div>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-line system-welcome">
+                            <span class="welcome-text">Esra Çayırpunar CLI Shell v3.0.0 (KTU Computer Engineering Edition)</span>
+                            <br>
+                            <span>Komut listesi için <code class="cmd-highlight">help</code> yazıp ENTER'a basınız.</span>
+                        </div>
+                    </div>
+                    <div class="terminal-input-row">
+                        <span class="prompt-symbol">esra@dev:~$</span>
+                        <input type="text" id="terminal-input" placeholder="komut yazın... (örn: help)"
+                            autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">&lt;get-in-touch&gt;</span>
+                    <h2 class="section-title">İletişime Geç</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-wrapper glass-panel">
+                    <div class="contact-info">
+                        <h3>Bir Projeniz veya İş Fırsatınız mı Var?</h3>
+                        <p>Mobil geliştirme (Android BLE, Modbus), backend mimarileri (.NET Core, Spring Boot) veya yapay zeka projeleriniz ve teklifleriniz için bana ulaşabilirsiniz!</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <span class="contact-label">E-Posta</span>
+                                    <button class="copy-email-btn" id="copy-email-btn">
+                                        <span id="email-text">ecayirpunar@gmail.com</span>
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <span class="contact-label">Telefon</span>
+                                    <span>0 546 763 44 66</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <span class="contact-label">Konum</span>
+                                    <span> Türkiye </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/esraac" target="_blank" class="social-btn"
+                                aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/esra-%C3%A7ay%C4%B1rpunar/" target="_blank"
+                                class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:ecayirpunar@gmail.com" class="social-btn" aria-label="Email"><i
+                                    class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Adınız / Şirketiniz</label>
+                            <input type="text" id="form-name" placeholder="Örn: Ahmet Yılmaz" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">E-Posta Adresiniz</label>
+                            <input type="email" id="form-email" placeholder="Örn: ahmet@sirket.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Mesajınız</label>
+                            <textarea id="form-message" rows="4"
+                                placeholder="Projeniz veya teklifiniz hakkında detaylar..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa-solid fa-paper-plane"></i> Mesaj Gönder
+                        </button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 <strong>Esra Çayırpunar</strong></p>
+        </div>
+    </footer>
+
+    <!-- Cyber Cursor Followers -->
+    <div id="cyber-cursor"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
